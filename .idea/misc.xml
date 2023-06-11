@@ -1,4 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_14" default="false" project-jdk-name="15" project-jdk-type="JavaSDK" />
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/barber shop/The-Barbarians/app/src/main/res/layout/activity_appointment.xml" value="0.1" />
+        <entry key="..\:/barber shop/The-Barbarians/app/src/main/res/layout/activity_home.xml" value="0.10989583333333333" />
+        <entry key="..\:/barber shop/The-Barbarians/app/src/main/res/layout/activity_main.xml" value="0.10989583333333333" />
+        <entry key="..\:/barber shop/The-Barbarians/app/src/main/res/layout/activity_notification.xml" value="0.10989583333333333" />
+        <entry key="..\:/barber shop/The-Barbarians/app/src/main/res/layout/activity_trends.xml" value="0.152" />
+        <entry key="..\:/barber shop/The-Barbarians/app/src/main/res/layout/item.xml" value="0.152" />
+        <entry key="..\:/barber shop/The-Barbarians/app/src/main/res/layout/video_view.xml" value="0.1" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK" />
 </project>
