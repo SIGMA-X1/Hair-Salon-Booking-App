@@ -55,7 +55,7 @@
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
         android:fontFamily="@font/nosifer"
-        android:text="THE BARBARIANS"
+        android:text="E-SALON APPLICATION"
         android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

@@ -44,52 +44,38 @@ public class Login extends AppCompatActivity {
         mLoginBtn = findViewById(R.id.loginBtn);
         mCreateBtn = findViewById(R.id.createText);
         /* forgotTextLink = findViewById(R.id.forgotPassword);*/
-
-
         mLoginBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 String email = mEmail.getText().toString().trim();
                 String password = mPassword.getText().toString().trim();
-
                 if (TextUtils.isEmpty(email)) {
                     mEmail.setError("Email is Required.");
-                    return;
-                }
-
+                    return;}
                 if (TextUtils.isEmpty(password)) {
                     mPassword.setError("Password is Required.");
-                    return;
-                }
-
+                    return;}
                 if (password.length() < 6) {
                     mPassword.setError("Password Must be >= 6 Characters");
                     return;
                 }
-
                 progressBar.setVisibility(View.VISIBLE);
-
                 // authenticate the user
-
                 fAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
                             Toast.makeText(Login.this, "Logged in Successfully !!", Toast.LENGTH_SHORT).show();
-                            startActivity(new Intent(Login.this, OnBoardingActivity.class));
+                            startActivity(new Intent(Login.this, Home.class));
                             finish();
                         } else {
                             Toast.makeText(Login.this, "Login Failed ! " + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
                             progressBar.setVisibility(View.GONE);
                         }
-
                     }
                 });
-
             }
         });
-
    mCreateBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

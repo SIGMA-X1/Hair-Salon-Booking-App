@@ -1,27 +1,52 @@
 <resources>
     <string name="app_name">Hair Salon Booking App</string>
-
     //onboard screen
-
     <string name="ob_header1">BOOK AN APPOINTMENT</string>
     <string name="ob_header2">MEET OUR BARBERS</string>
     <string name="ob_header3">CONFIRMATION</string>
-
     <string name="ob_get_started">GET STARTED</string>
-
     <string name="ob_desc1">User needs to book his slot inorder to have his Haircut .</string>
-    <string name="ob_desc2">Our service promises every user to fulfill their Dream look  .</string>
+    <string name="ob_desc2">Our service promises every user to fulfill their Dream look .</string>
     <string name="ob_desc3">Once an appointment is confirmed, Do Visit our Salon on Allotted Date.</string>
-
-
     //appointment
     <string-array name="Barber">
-        <item>Select a Barber</item>
-        <item>Puneeth K Shetty</item>
-        <item>Spandan H Shetty</item>
+        <item> Select a Barber Shop</item>
     </string-array>
-
+    <string-array name="Barber_Padil">
+        <item>Select a Barber Shop</item>
+        <item>The Sharp Cut</item>
+        <item>Clipper Kings</item>
+    </string-array>
+    <string-array name="Barber_kannur">
+        <item>Select a Barber shop</item>
+        <item>The Dapper Den</item>
+        <item>The Barber\'s Edge</item>
+    </string-array>
+    <string-array name="Barber_Adyar">
+        <item>Select a Barber shop </item>
+        <item>Fresh Fades</item>
+        <item>Groomed Co.</item>
+    </string-array>
+    <string-array name="Barber_Nantoor">
+        <item>Select a Barber shop</item>
+        <item>The Mane Studio</item>
+        <item>The Clip Joint</item>
+    </string-array>
+    <string-array name="Barber_Statebank">
+        <item>Select a Barber shop</item>
+        <item>Razor n Comb</item>
+        <item>Style Society</item>
+    </string-array>
+    <string-array name="Locations">
+        <item>Select a Location</item>
+        <item>Padil</item>
+        <item>Kannur</item>
+        <item>Adyar</item>
+        <item>Nantoor</item>
+        <item>Statebank</item>
+    </string-array>
     <string name="date">Date of Booking :</string>
     <string name="time">Time of Booking :</string>
-    <string name="barber">Barber Booked :</string>
+    <string name="location">Location :</string>
+    <string name="barber">Salon Booked :</string>
 </resources>

@@ -32,7 +32,7 @@
                 android:layout_marginTop="5dp"
                 android:fontFamily="sans-serif-black"
                 android:gravity="center_horizontal"
-                android:text="Puneeth K Shetty"
+                android:text="The Sharp Cut"
                 android:textAlignment="center"
                 android:textColor="@color/black"
                 android:textSize="30sp" />
@@ -99,7 +99,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Spandan H Shetty"
+                android:text="The Dapper Den"
                 android:textSize="30sp"
                 android:fontFamily="sans-serif-black"
                 android:textAlignment="center"

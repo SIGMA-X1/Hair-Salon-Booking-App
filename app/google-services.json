@@ -1,33 +1,33 @@
 {
   "project_info": {
-    "project_number": "169689041040",
-    "project_id": "barber-shop-961d9",
-    "storage_bucket": "barber-shop-961d9.appspot.com"
+    "project_number": "703299147261",
+    "project_id": "temp-52061",
+    "storage_bucket": "temp-52061.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:169689041040:android:da731c930e0606429bf015",
+        "mobilesdk_app_id": "1:703299147261:android:dc22ce705e7e5cd4577594",
         "android_client_info": {
           "package_name": "com.example.hairsalonbookingapp"
         }
       },
       "oauth_client": [
         {
-          "client_id": "169689041040-fr45qt74p2hcso0p2iclr881i5nl8ubh.apps.googleusercontent.com",
+          "client_id": "703299147261-p1afnm28u2vrf4nqo7ktpoma5ie8qa6v.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyANyfNv8OpT2G5PcvxlJ-rwck-iDWCOdpo"
+          "current_key": "AIzaSyBG68bh_gBvInEVhB-11hb3KqHL6XpdVco"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "169689041040-fr45qt74p2hcso0p2iclr881i5nl8ubh.apps.googleusercontent.com",
+              "client_id": "703299147261-p1afnm28u2vrf4nqo7ktpoma5ie8qa6v.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

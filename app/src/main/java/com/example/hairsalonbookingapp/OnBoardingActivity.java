@@ -19,83 +19,57 @@ import androidx.viewpager.widget.ViewPager;
 import java.util.ArrayList;
 
 public class OnBoardingActivity extends AppCompatActivity {
-
     private LinearLayout pager_indicator;
     private int dotsCount;
     private ImageView[] dots;
-
-
     private ViewPager onboard_pager;
-
     private OnBoard_Adapter mAdapter;
-
     private Button btn_get_started;
-
     int previous_pos=0;
-
-
     ArrayList<OnBoardItem> onBoardItems=new ArrayList<>();
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_on_boarding);
-
         if (getSupportActionBar() != null)  //remove top actionbar
         {
             getSupportActionBar().hide();
         }
-
         btn_get_started = (Button) findViewById(R.id.btn_get_started);
         onboard_pager = (ViewPager) findViewById(R.id.pager_introduction);
         pager_indicator = (LinearLayout) findViewById(R.id.viewPagerCountDots);
-
         loadData();
-
         mAdapter = new OnBoard_Adapter(this,onBoardItems);
         onboard_pager.setAdapter(mAdapter);
         onboard_pager.setCurrentItem(0);
         onboard_pager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
             public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
-
             }
-
             @Override
             public void onPageSelected(int position) {
-
                 // Change the current position intimation
-
                 for (int i = 0; i < dotsCount; i++) {
                     dots[i].setImageDrawable(ContextCompat.getDrawable(OnBoardingActivity.this, R.drawable.non_selected_item_dot));
                 }
-
                 dots[position].setImageDrawable(ContextCompat.getDrawable(OnBoardingActivity.this, R.drawable.selected_item_dot));
-
-
                 int pos=position+1;
-
                 if(pos==dotsCount&&previous_pos==(dotsCount-1))
                     show_animation();
                 else if(pos==(dotsCount-1)&&previous_pos==dotsCount)
                     hide_animation();
-
                 previous_pos=pos;
             }
-
             @Override
             public void onPageScrollStateChanged(int state) {
-
             }
         });
-
         btn_get_started.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
                 Toast.makeText(OnBoardingActivity.this,"Welcome Mate, to the world of Barbarians",Toast.LENGTH_LONG).show();
-                startActivity(new Intent(OnBoardingActivity.this,Home.class));
+                startActivity(new Intent(OnBoardingActivity.this,Login.class));
             }
 
         });
@@ -108,11 +82,9 @@ public class OnBoardingActivity extends AppCompatActivity {
 
     public void loadData()
     {
-
         int[] header = {R.string.ob_header1, R.string.ob_header2, R.string.ob_header3};
         int[] desc = {R.string.ob_desc1, R.string.ob_desc2, R.string.ob_desc3};
         int[] imageId = {R.drawable.appointments, R.drawable.hairdresser, R.drawable.done};
-
         for(int i=0;i<imageId.length;i++)
         {
             OnBoardItem item=new OnBoardItem();
@@ -123,22 +95,16 @@ public class OnBoardingActivity extends AppCompatActivity {
             onBoardItems.add(item);
         }
     }
-
     // Button bottomUp animation
-
     public void show_animation()
     {
         Animation show = AnimationUtils.loadAnimation(this, R.anim.slide_up_anim);
-
         btn_get_started.startAnimation(show);
-
         show.setAnimationListener(new Animation.AnimationListener() {
-
             @Override
             public void onAnimationStart(Animation animation) {
                 btn_get_started.setVisibility(View.VISIBLE);
             }
-
             @Override
             public void onAnimationRepeat(Animation animation) {
             }

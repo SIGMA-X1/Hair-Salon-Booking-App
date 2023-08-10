@@ -18,7 +18,6 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
-
 public class Register extends AppCompatActivity {
     EditText mFullName, mEmail, mPassword, mPhone;
     Button mRegisterBtn;
@@ -26,16 +25,13 @@ public class Register extends AppCompatActivity {
     FirebaseAuth fAuth;
     ProgressBar progressBar;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
 
-
-        if(getSupportActionBar()!=null)  //remove top actionbar
-        {
-            getSupportActionBar().hide();
+        if (getSupportActionBar() != null) {
+            getSupportActionBar().hide(); // Remove top action bar
         }
 
         mFullName = findViewById(R.id.Name);
@@ -48,53 +44,54 @@ public class Register extends AppCompatActivity {
         fAuth = FirebaseAuth.getInstance();
         progressBar = findViewById(R.id.progressBar);
 
-        if (fAuth.getCurrentUser() != null) {
-            startActivity(new Intent(getApplicationContext(), Login.class));
-            finish();
-        }
-
         mRegisterBtn.setOnClickListener(new View.OnClickListener() {
-
             @Override
             public void onClick(View v) {
                 String email = mEmail.getText().toString().trim();
                 String password = mPassword.getText().toString().trim();
 
                 if (TextUtils.isEmpty(email)) {
-                    mEmail.setError("Email is Required");
+                    mEmail.setError("Email is required");
                     return;
                 }
                 if (TextUtils.isEmpty(password)) {
-                    mPassword.setError("Password is Required");
+                    mPassword.setError("Password is required");
                     return;
                 }
                 if (password.length() < 6) {
-                    mPassword.setError("Password must be >= 6 Characters");
+                    mPassword.setError("Password must be at least 6 characters");
                     return;
                 }
+                if (mPhone.length() != 10) {
+                    mPhone.setError("Phone number should be 10 digits");
+                    return;
+                }
+
                 progressBar.setVisibility(View.VISIBLE);
 
-                //REGISTER THE USER IN FIREBASE
-
+                // Register the user in Firebase
                 fAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
-                            Toast.makeText(Register.this, "User is Registered Successfully !!", Toast.LENGTH_SHORT).
-                                    show();
+                            Toast.makeText(Register.this, "User registered successfully!", Toast.LENGTH_SHORT).show();
                             startActivity(new Intent(getApplicationContext(), Login.class));
+                            startActivity(new Intent(Register.this, OnBoardingActivity.class));
+                            finish();
                         } else {
-                            Toast.makeText(Register.this, "Registration Failed !" + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
+                            Toast.makeText(Register.this, "Registration failed: " + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
                         }
+                        progressBar.setVisibility(View.GONE);
                     }
                 });
             }
         });
+
         mLoginBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getApplicationContext(),Login.class));
+                startActivity(new Intent(getApplicationContext(), Login.class));
+                finish();
             }
         });
     }

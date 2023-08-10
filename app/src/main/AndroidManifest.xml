@@ -8,7 +8,6 @@
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.CALL_PHONE"></uses-permission>
 
     <application
         android:allowBackup="true"
@@ -17,22 +16,41 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.HairSalonBookingApp">
-        <activity android:name=".Register">
+        <activity
+            android:name=".Tattoo"
+            android:exported="false" />
+        <activity
+            android:name=".Trim"
+            android:exported="false" />
+        <activity
+            android:name=".hairdye"
+            android:exported="false" />
+        <activity
+            android:name=".womencut"
+            android:exported="false" />
+        <activity
+            android:name=".Mencut"
+            android:exported="false" />
+        <activity
+            android:name=".Register"
+            android:exported="true" />
+        <activity android:name=".OnBoardingActivity" />
+        <activity
+            android:name=".Login"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".Home" />
+        <activity android:name=".Appointment" />
+        <activity android:name=".Services" />
+        <activity android:name=".Notification" />
+        <activity android:name=".Barber" />
+        <activity android:name=".Trends" />
 
-        <activity android:name=".Login"/>
-        <activity android:name=".OnBoardingActivity"/>
-        <activity android:name=".Home"/>
-        <activity android:name=".Appointment"/>
-        <activity android:name=".Services"/>
-        <activity android:name=".Notification"/>
-        <activity android:name=".Barber"/>
-        <activity android:name=".Trends"/>
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />

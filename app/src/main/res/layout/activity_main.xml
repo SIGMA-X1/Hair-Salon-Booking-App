@@ -32,10 +32,10 @@
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="298dp"
-        android:layout_height="40dp"
+        android:layout_width="312dp"
+        android:layout_height="109dp"
         android:fontFamily="@font/nosifer"
-        android:text="THE BARBARIANS"
+        android:text="THE E-SALON APPLICATION"
         android:textColor="@color/white"
         android:textSize="25sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -52,7 +52,7 @@
         android:layout_marginBottom="64dp"
         android:fontFamily="@font/graduate"
         android:textColor="@color/grey"
-        android:text="MESS WITH US AND GET CUT"
+        android:text=""
         android:textSize="15sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

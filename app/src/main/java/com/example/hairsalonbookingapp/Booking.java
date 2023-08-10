@@ -1,16 +1,17 @@
 package com.example.hairsalonbookingapp;
 
 public class Booking {
-
     String id;
     String date;
     String time;
+    String location;
     String barber;
 
-    public Booking(String id,String date,String time, String barber){
+    public Booking(String id, String date, String time,String location, String barber){
         this.id =id;
         this.date = date;
         this.time = time;
+        this.location = location;
         this.barber = barber;
     }
 
@@ -32,6 +33,15 @@ public class Booking {
 
         return time;
     }
+
+    public String getLocation() {
+        return location;
+    }
+
+    public void setLocation(String location) {
+        this.location = location;
+    }
+
     public void setTime(String time){
         this.time = time;
     }
